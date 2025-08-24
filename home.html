@@ -82,7 +82,7 @@
             </section>
 
             <!-- transaction history section  -->
-            <section class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5">
+            <section id="add-money-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
                 <h1 class="m-4 text-lg font-bold text-center">Add Money</h1>
                 <form class="bg-white p-7 rounded-lg ">
                     <div>
@@ -118,12 +118,39 @@
                         class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Add Money</button>
                 </form>
             </section>
+            <section id="cashout-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+                <h1 class="m-4 text-lg font-bold text-center">Cashout</h1>
+                <form class="bg-white p-7 rounded-lg ">
+                    <div>
+                        <label class="font-semibold">Agent Number</label>
+                        <br>
+                        <input id="cashout-agent-number" type="number" placeholder="Enter Agent Number"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">Amount</label>
+                        <br>
+                        <input id="cashout-amount" type="number" placeholder="Enter Amount"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">PIN Number</label>
+                        <br>
+                        <input id="cashout-account-pin" type="password" placeholder="Enter PIN"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <button type="button" id="cashout-btn"
+                        class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Cashout</button>
+                </form>
+            </section>
         </main>
     </div>
 
 
 
     <script src="./js/add-money.js"></script>
+    <script src="./js/toggling.js"></script>
+    <script src="./js/cashout.js"></script>
 </body>
 
 </html>
