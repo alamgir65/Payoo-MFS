@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo-HOME</title>
+
+    <!-- Font Awesome 6 (Free CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>Hello! From Home</h1>
+
+<body class="bg-[#f4f5f7] width-[450px] flex flex-col justify-start items-center rounded-2xl">
+    <div class="bg-white">
+        <header>
+            <section class="flex justify-between items-center p-3 w-[450px] font-semibold">
+                <p>9:41</p>
+                <div>
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
+                </div>
+            </section>
+            <nav class="flex justify-between m-3">
+                <div class="flex justify-between">
+                    <img class="w-[30%]" src="assets/Group.png" alt="">
+                    <div class="">
+                        <p class="font-bold">$ <span>0.00</span></p>
+                        <p class="font-extralight text-sm">Available Balance</p>
+                    </div>
+                </div>
+                <button class="btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </nav>
+        </header>
+        <hr>
+        <main class="bg-white w-[450px] p-3 my-3">
+            <section>
+                <div>
+                    <h1 class="flex text-lg font-bold mb-3"><img width="28" height="28"
+                            src="https://img.icons8.com/emoji/48/fire.png" alt="fire" /> Welcome to Payoo!!</h1>
+                    <p class="text-base font-normal">Enjoy easy and convenient financial services with us. Cashout
+                        charge is low and </p>
+                </div>
+            </section>
+
+            <!-- all transactions button section  -->
+            <section class="grid grid-cols-3 gap-3 mt-5">
+                <div id="add-money-box"
+                    class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
+                    <img src="./assets/wallet1.png" alt="">
+                    <p>Add Money</p>
+                </div>
+                <div id="cashout-box"
+                    class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
+                    <img src="./assets/bonus1.png" alt="">
+                    <p>Cashout</p>
+                </div>
+                <div id="transfer-box"
+                    class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
+                    <img src="./assets/money1.png" alt="">
+                    <p>Transfer <br> Money</p>
+                </div>
+                <div id="get-bonus-box"
+                    class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
+                    <img src="./assets/bonus1.png" alt="">
+                    <p>Get Bonus</p>
+                </div>
+                <div id="pay-bill-box"
+                    class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
+                    <img src="./assets/purse1.png" alt="">
+                    <p>Pay Bill</p>
+                </div>
+                <div id="transactions-box"
+                    class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
+                    <img src="./assets/transaction1.png" alt="">
+                    <p>Transactions</p>
+                </div>
+            </section>
+
+            <!-- transaction history section  -->
+            <section class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5">
+                <h1 class="m-4 text-lg font-bold text-center">Add Money</h1>
+                <form class="bg-white p-7 rounded-lg ">
+                    <div>
+                        <fieldset class="fieldset ">
+                            <legend class="fieldset-legend font-semibold text-base">Select Bank</legend>
+                            <select class="select bg-[#f4f5f7] my-3 rounded-2xl">
+                                <option disabled selected>Select a bank</option>
+                                <option>Brac Bank</option>
+                                <option>Eastern Bank</option>
+                                <option>Islami Bank</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label class="font-semibold">Bank Account Number</label>
+                        <br>
+                        <input id="login-phone-number" type="number" placeholder="Enter 11-digit Account Number"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">Amount</label>
+                        <br>
+                        <input id="login-phone-number" type="number" placeholder="Enter 11-digit Account Number"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">PIN Number</label>
+                        <br>
+                        <input id="account-pin" type="password" placeholder="Enter PIN"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <button type="button" id="add-money-btn"
+                        class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Add Money</button>
+                </form>
+            </section>
+        </main>
+    </div>
 </body>
+
 </html>
