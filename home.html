@@ -145,7 +145,8 @@
                 </form>
             </section>
             <!-- Transfer money section  -->
-            <section id="transfer-money-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+            <section id="transfer-money-form"
+                class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
                 <h1 class="m-4 text-lg font-bold text-center">Transfer Money</h1>
                 <form class="bg-white p-7 rounded-lg ">
                     <div>
@@ -187,7 +188,7 @@
             </section>
 
             <!-- Pay Bill section   -->
-             <section id="pay-bill-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+            <section id="pay-bill-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
                 <h1 class="m-4 text-lg font-bold text-center">Pay Bill</h1>
                 <form class="bg-white p-7 rounded-lg ">
                     <div>
@@ -225,9 +226,24 @@
             </section>
 
             <!-- Transactions section  -->
-             <section id="transaction-section" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5">
+            <section id="transaction-section" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5">
                 <h1 class="m-4 text-lg font-bold text-center">Transactions</h1>
-                
+                <div id="transaction-list">
+                    <div class="flex justify-between bg-white p-3">
+                        <div class="flex">
+                            <div class="rounded-[50%] bg-[#f4f5f7] p-3 mr-5">
+                                <img src="./assets/wallet1.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="text-lg font-bold">Transaction Name</h1>
+                                <p>Today 11:39 AM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
@@ -241,6 +257,7 @@
     <script src="./js/transfer-money.js"></script>
     <script src="./js/get-bonus.js"></script>
     <script src="./js/pay-bill.js"></script>
+    <script src="./js/transaction.js"></script>
 </body>
 
 </html>

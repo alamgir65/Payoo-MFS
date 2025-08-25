@@ -1,5 +1,7 @@
 // console.log('Hello from add-money.js');
 
+// import {createTransaction} from './transaction'
+
 document.getElementById('add-money-btn')
     .addEventListener('click', function (e){
         e.preventDefault();
@@ -19,5 +21,7 @@ document.getElementById('add-money-btn')
         const newBalance = parseFloat(totalBalance) + parseFloat(amount);
         document.getElementById('total-balance').innerText = newBalance;
 
+
+        // createTransaction('Check');
 
     })
