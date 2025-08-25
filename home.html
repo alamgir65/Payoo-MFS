@@ -33,7 +33,7 @@
                         <p class="font-extralight text-sm">Available Balance</p>
                     </div>
                 </div>
-                <button class="btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+                <button id="logout-btn" class="btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
             </nav>
         </header>
         <hr>
@@ -59,7 +59,7 @@
                     <img src="./assets/bonus1.png" alt="">
                     <p>Cashout</p>
                 </div>
-                <div id="transfer-box"
+                <div id="transfer-money-box"
                     class="border border-gray-300 h-[80px] rounded-lg p-3 my-3 flex flex-col justify-center items-center">
                     <img src="./assets/money1.png" alt="">
                     <p>Transfer <br> Money</p>
@@ -143,6 +143,89 @@
                         class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Cashout</button>
                 </form>
             </section>
+            <section id="transfer-money-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+                <h1 class="m-4 text-lg font-bold text-center">Transfer Money</h1>
+                <form class="bg-white p-7 rounded-lg ">
+                    <div>
+                        <label class="font-semibold">User Account Number</label>
+                        <br>
+                        <input id="transfer-user-account-number" type="number" placeholder="Enter Agent Number"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">Amount</label>
+                        <br>
+                        <input id="transfer-amount" type="number" placeholder="Enter Amount"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">PIN Number</label>
+                        <br>
+                        <input id="transfer-account-pin" type="password" placeholder="Enter PIN"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <button type="button" id="cashout-btn"
+                        class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Send Money</button>
+                </form>
+            </section>
+
+            <!-- Coupon section  -->
+            <section id="get-bonus-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+                <h1 class="m-4 text-lg font-bold text-center">Get Bonus</h1>
+                <form class="bg-white p-7 rounded-lg ">
+                    <div>
+                        <label class="font-semibold">Enter Coupon Code</label>
+                        <br>
+                        <input id="coupon-code" type="text" placeholder="Enter coupon code"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <button type="button" id="coupon-btn"
+                        class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Get Bonus</button>
+                </form>
+            </section>
+
+            <!-- Pay Bill section   -->
+             <section id="pay-bill-form" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+                <h1 class="m-4 text-lg font-bold text-center">Pay Bill</h1>
+                <form class="bg-white p-7 rounded-lg ">
+                    <div>
+                        <fieldset class="fieldset ">
+                            <legend class="fieldset-legend font-semibold text-base">Select To Pay</legend>
+                            <select id="pay-type-name" class="select bg-[#f4f5f7] my-3 rounded-2xl">
+                                <option disabled selected value="">Select To pay</option>
+                                <option value="current">Current Bill</option>
+                                <option value="wasa">Wasa Bill</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label class="font-semibold">Biller Account Number</label>
+                        <br>
+                        <input id="pay-biller-account-number" type="number" placeholder="Enter 11-digit Account Number"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">Amount</label>
+                        <br>
+                        <input id="pay-amount" type="number" placeholder="Enter Amount"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <div>
+                        <label class="font-semibold">PIN Number</label>
+                        <br>
+                        <input id="pay-account-pin" type="password" placeholder="Enter PIN"
+                            class="input bg-[#f4f5f7] my-3 rounded-2xl" />
+                    </div>
+                    <button type="button" id="pay-btn"
+                        class="btn bg-[#0874F2] w-full rounded-2xl text-white font-semibold">Pay Bill</button>
+                </form>
+            </section>
+
+            <!-- Transactions section  -->
+             <section id="transaction-section" class="bg-[#f4f5f7] flex flex-col justify-center p-3 rounded-lg mt-5 hidden">
+                <h1 class="m-4 text-lg font-bold text-center">Transactions</h1>
+                
+            </section>
         </main>
     </div>
 
@@ -151,6 +234,7 @@
     <script src="./js/add-money.js"></script>
     <script src="./js/toggling.js"></script>
     <script src="./js/cashout.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
