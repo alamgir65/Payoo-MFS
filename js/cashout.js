@@ -2,27 +2,28 @@
 
 document.getElementById('cashout-btn')
     .addEventListener('click', function (e){
-        e.preventDefault();
+        // e.preventDefault();
         const agentNumber = document.getElementById('cashout-agent-number').value;
         const amount = document.getElementById('cashout-amount').value;
-        const pin = document.getElementById('cashout-pin').value;
+        const pin = document.getElementById('cashout-account-pin').value;
 
         const totalBalance = document.getElementById('total-balance').innerText;
 
-        console.log(agentNumber, amount, pin);
-        console.log('Hello from cashout.js'); 
-        return;
 
-        if(agentNumber != 1234 || pin != 1234 || amount <= 0 || amount > 100000){
-            alert('Invalid input. Please check your information again.');
+        if(agentNumber.length < 6){
+            alert('Agent Number must be atleast 6 digit');
             return;
-        }else if(amount > totalBalance){
-            alert('Insufficient balance');
+        }
+        else if(pin != 1234){
+            alert('Incorrect PIN');
+            return ;
+        }
+        else if(amount <= 0 || amount > 100000 || amount > totalBalance){
+            alert('Invalid amount.');
             return;
         }
 
         const newBalance = parseFloat(totalBalance) - parseFloat(amount);
         document.getElementById('total-balance').innerText = newBalance;
-
 
     })
